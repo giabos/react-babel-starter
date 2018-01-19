@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server",
-    "compile": "babel src -d lib"
+    "build": "webpack"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
