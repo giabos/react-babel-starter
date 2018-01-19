@@ -1,13 +1,8 @@
 import  React from 'react';
 import  {Component} from 'react';
 import { render } from 'react-dom';
+import { hello } from "./hello";
 
-debugger;
-render(<div>hello</div>, document.getElementById('react-root'));
-
-
-
-
-console.log("hello world");
+render(<div>{hello}</div>, document.getElementById('react-root'));
 
 
