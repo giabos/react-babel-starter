@@ -3,16 +3,22 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-      template: './src/index.html',
+        template: './src/index.html',
         filename: 'index.html',
-          inject: 'body'
+        inject: 'body',
+        hash: true,
+        chunksSortMode: 'manual',
+        chunks: ['config', 'bundle']
 })
 
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        config: './src/config.js',
+        bundle: './src/index.js',
+    },
     output: {
         path: path.resolve('build'),
-        filename: 'bundle.js'
+        filename: '[name].js'
     },
     module: {
     loaders: [
